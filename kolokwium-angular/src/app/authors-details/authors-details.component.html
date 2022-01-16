@@ -1,0 +1,21 @@
+<h1>Autorzy</h1>
+<app-authors-details-form></app-authors-details-form>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of service.list">
+            <td>{{a.id}}</td>
+            <td>{{a.firstName}}</td>
+            <td>{{a.lastName}}</td>
+            <td>{{a.email}}</td>
+        </tr>
+    </tbody>
+</table>
+   

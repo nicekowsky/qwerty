@@ -1,0 +1,10 @@
+<form novalidate #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="Id" [value]="service.formData.Id"/>
+      <label>Imię</label>
+      <input type="text" placeholder="Imię" name="FirstName" #FirstName="ngModel" [(ngModel)]="service.formData.FirstName" required/>
+      <label>Nazwisko</label>
+      <input type="text" placeholder="Nazwisko" name="LastName" #LastName="ngModel" [(ngModel)]="service.formData.LastName" required/>
+      <label>Email</label>
+      <input type="email" placeholder="Email" name="Email" #Email="ngModel" [(ngModel)]="service.formData.Email" required/>
+      <button type="submit" [disabled]="form.invalid">Wyślij</button>
+  </form>
